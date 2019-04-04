@@ -38,7 +38,7 @@ class Establishment {
 
   @override
   String toString() {
-    return 'Establishment: name = ${name}, address = ${address}, city = ${city}';
+    return '{Establishment: name = ${name}, address = ${address}, city = ${city}}';
   }
 
   factory Establishment.fromJson(Map<String, dynamic> json) {
