@@ -10,6 +10,7 @@ class MainMenu extends StatelessWidget {
 
   Widget buttonForMenuOfBars(BuildContext context) {
     return RaisedButton(
+            padding: EdgeInsets.all(10.0),
             child: Image.asset('assets/bar_button.png'),
             onPressed: () {
               Navigator.push(
@@ -22,6 +23,7 @@ class MainMenu extends StatelessWidget {
 
   Widget buttonForBrewpubs(BuildContext context) {
     return RaisedButton(
+      padding: EdgeInsets.all(10.0),
       child: Image.asset('assets/brewpubs_button.png'),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => ListEstablishments("Brewpubs")));
@@ -31,6 +33,7 @@ class MainMenu extends StatelessWidget {
 
   Widget buttonForMenuOfPubs(BuildContext context) {
     return RaisedButton(
+      padding: EdgeInsets.all(10.0),
       child: Image.asset('assets/pubs_button.png'),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => ListEstablishments("Pubs")));
