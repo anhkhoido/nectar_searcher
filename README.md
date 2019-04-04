@@ -1,6 +1,6 @@
 # nectar_searcher
 
-An app that locates craft beer on tap in Toronto.
+An app that locates bars, brewpubs and pubs that serve craft beer on tap in Toronto. In order to help beer enthusiasts, this app uses the API of Google Maps.
 
 ## Getting Started
 
