@@ -38,8 +38,6 @@ class _ListEstablishments extends State<ListEstablishments> {
     var response = await http.get(Uri.encodeFull(link), headers: {"Content-Type": "application/json"});
     setState(() {
       if (response.statusCode == 200) {
-        print(response.statusCode);
-        print(link);
         var decodedResponse = jsonDecode(response.body);
         var arrayOfEstablishments = decodedResponse[title.toLowerCase()] as List;
         establishments = arrayOfEstablishments.map<Establishment>((json) => Establishment.fromJson(json)).toList();
