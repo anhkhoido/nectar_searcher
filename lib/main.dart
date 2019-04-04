@@ -6,11 +6,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Nectar Searcher',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.black,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Nectar Searcher'),
     );
   }
 }
