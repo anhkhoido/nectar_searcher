@@ -31,6 +31,8 @@
 /packages/flutter/coverage/
 version
 
+**/test/experiments.dart
+
 # Flutter/Dart/Pub related
 **/doc/api/
 .dart_tool/
