@@ -51,6 +51,8 @@ class MainMenu extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             buttonForMenuOfBars(context),
+            buttonForBrewpubs(context),
+            buttonForMenuOfPubs(context),
           ],
         ),
       ),
