@@ -35,6 +35,12 @@ class Establishment {
                 this.friday,
                 this.saturday});
 
+
+  @override
+  String toString() {
+    return 'Establishment: name = ${name}, address = ${address}, city = ${city}';
+  }
+
   factory Establishment.fromJson(Map<String, dynamic> json) {
     return Establishment(name: json["name"],
                         address: json['address'],
