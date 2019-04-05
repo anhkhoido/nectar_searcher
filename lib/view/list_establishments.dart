@@ -31,6 +31,7 @@ class _ListEstablishments extends State<ListEstablishments> {
       this.getEstablishments();
     } catch (e) {
       print(e.toString());
+      Navigator.of(context).pop();
     }
   }
 
