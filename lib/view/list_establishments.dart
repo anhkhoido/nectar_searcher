@@ -44,11 +44,9 @@ class _ListEstablishments extends State<ListEstablishments> {
         var arrayOfEstablishments = decodedResponse[title.toLowerCase()] as List;
         establishments = arrayOfEstablishments.map<Establishment>((json) => Establishment.fromJson(json)).toList();
       } else {
-        print("The app could not retrieve the list of " + this.title.toLowerCase() + ".");
         Navigator.of(context).pop();
       }
     });
-    print(establishments.length);
     return establishments;
   }
   
