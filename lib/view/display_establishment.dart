@@ -7,6 +7,14 @@ class DisplayEstablishment extends StatelessWidget {
 
   DisplayEstablishment(this.establishment);
 
+  Widget columnWithDetailsAboutEstablishment(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        
+      ],
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +22,10 @@ class DisplayEstablishment extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text(this.establishment.name),
+      ),
+      body: Container(
+        margin: EdgeInsets.fromLTRB(5.0, 2.0, 5.0, 2.0),
+        child: columnWithDetailsAboutEstablishment(context),
       ),
     );
   }
