@@ -60,6 +60,7 @@ class _ListEstablishments extends State<ListEstablishments> {
               child: ListTile(
                 title: Text(establishment[position].name),
                 subtitle: Text(establishment[position].address),
+                onTap: null,
               ),
             );
           }
