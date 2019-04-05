@@ -41,6 +41,9 @@ class _ListEstablishments extends State<ListEstablishments> {
         var decodedResponse = jsonDecode(response.body);
         var arrayOfEstablishments = decodedResponse[title.toLowerCase()] as List;
         establishments = arrayOfEstablishments.map<Establishment>((json) => Establishment.fromJson(json)).toList();
+      } else {
+        print("The app could not retrieve the list of " + this.title.toLowerCase() + ".");
+        Navigator.of(context).pop();
       }
     });
     print(establishments.length);
@@ -48,7 +51,6 @@ class _ListEstablishments extends State<ListEstablishments> {
   }
 
   Widget listViewWidget(List<Establishment> establishment) {
-    print(this.establishments);
     return Container(
       child: ListView.builder(
           itemCount: establishment.length,
@@ -65,6 +67,12 @@ class _ListEstablishments extends State<ListEstablishments> {
     );
   }
 
+  Widget progressIndicator() {
+    return Center(
+      child: CircularProgressIndicator(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,9 +81,7 @@ class _ListEstablishments extends State<ListEstablishments> {
         title: Text(title),
         backgroundColor: Colors.black,
       ),
-      body: (establishments != null) ?
-            listViewWidget(establishments) :
-            Center(child: CircularProgressIndicator())
+      body: establishments != null ? listViewWidget(establishments) : progressIndicator()
     );
   }
 }
