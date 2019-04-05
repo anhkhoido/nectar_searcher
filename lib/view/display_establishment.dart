@@ -44,6 +44,11 @@ class DisplayEstablishment extends StatelessWidget {
         Text(
           "Opening hours"
         ),
+        Row(
+          children: <Widget>[
+            Text("Sunday"),
+          ],
+        ),
         SizedBox(height: 25.0,),
         Text(
           "Public transportation"
