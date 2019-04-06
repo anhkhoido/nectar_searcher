@@ -134,9 +134,7 @@ class DisplayEstablishment extends StatelessWidget {
                           ),
                         ),
                         Text(this.establishment.friday,
-                          style: TextStyle(
-                              fontSize: 18.0
-                          ),
+                          style: TextStyle(fontSize: 18.0),
                         )
                       ],
                     ),
@@ -149,15 +147,13 @@ class DisplayEstablishment extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        Text("Saturday",
-                          style: TextStyle(
-                              fontSize: 18.0
-                          ),
+                        Text(
+                          "Saturday",
+                          style: TextStyle(fontSize: 18.0),
                         ),
-                        Text(this.establishment.saturday,
-                          style: TextStyle(
-                              fontSize: 18.0
-                          ),
+                        Text(
+                          this.establishment.saturday,
+                          style: TextStyle(fontSize: 18.0),
                         )
                       ],
                     ),
@@ -192,9 +188,7 @@ class DisplayEstablishment extends StatelessWidget {
             ),
             Text(
               this.establishment.address,
-              style: TextStyle(
-                fontSize: 18.0,
-              ),
+              style: TextStyle(fontSize: 18.0,),
             ),
             SizedBox(height: 25.0,),
             Text(
@@ -208,9 +202,7 @@ class DisplayEstablishment extends StatelessWidget {
             ),
             Text(
               this.establishment.intersection,
-              style: TextStyle(
-                fontSize: 18.0,
-              ),
+              style: TextStyle(fontSize: 18.0,),
             ),
             SizedBox(height: 25.0,),
             Text(
@@ -235,9 +227,7 @@ class DisplayEstablishment extends StatelessWidget {
             ),
             Text(
               this.establishment.subwayStation,
-              style: TextStyle(
-                  fontSize: 18.0
-              ),
+              style: TextStyle(fontSize: 18.0),
             ),
             SizedBox(height: 25.0,),
             RaisedButton(
