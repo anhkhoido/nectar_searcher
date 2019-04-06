@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/establishment.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'display_establishment.dart';
 
 class ListEstablishments extends StatefulWidget
 {
@@ -50,7 +51,7 @@ class _ListEstablishments extends State<ListEstablishments> {
     return establishments;
   }
 
-  Widget listViewWidget(List<Establishment> establishment) {
+  Widget listViewWidget(BuildContext context, List<Establishment> establishment) {
     return Container(
       child: ListView.builder(
           itemCount: establishment.length,
@@ -60,7 +61,12 @@ class _ListEstablishments extends State<ListEstablishments> {
               child: ListTile(
                 title: Text(establishment[position].name),
                 subtitle: Text(establishment[position].address),
-                onTap: null,
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DisplayEstablishment(establishment[position]))
+                  )
+                },
               ),
             );
           }
@@ -82,7 +88,7 @@ class _ListEstablishments extends State<ListEstablishments> {
         title: Text(title),
         backgroundColor: Colors.black,
       ),
-      body: establishments != null ? listViewWidget(establishments) : progressIndicator()
+      body: establishments != null ? listViewWidget(context, establishments) : progressIndicator()
     );
   }
 }
