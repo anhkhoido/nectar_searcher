@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar_searcher/model/establishment.dart';
+import 'establishment_on_map.dart';
 
 class DisplayEstablishment extends StatelessWidget {
 
@@ -242,7 +243,9 @@ class DisplayEstablishment extends StatelessWidget {
             RaisedButton(
               color: Colors.green[700],
               child: Text("Display on a map"),
-              onPressed: null,
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => EstablishmentOnMap()))
+              },
             )
           ],
         ),
