@@ -234,7 +234,7 @@ class DisplayEstablishment extends StatelessWidget {
               color: Colors.green[700],
               child: Text("Display on a map"),
               onPressed: () => {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => EstablishmentOnMap()))
+                Navigator.push(context, MaterialPageRoute(builder: (context) => EstablishmentOnMap(this.establishment)))
               },
             )
           ],
