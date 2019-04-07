@@ -14,7 +14,9 @@ class EstablishmentOnMap extends StatelessWidget {
 
     String url = "https://maps.google.com?q=" +
                   this.establishment.name + ", " +
-                  this.establishment.address;
+                  this.establishment.address + ", " +
+                  this.establishment.city + ", " +
+                  this.establishment.province;
 
     return Scaffold(
       body: _EstablishmentOnMap(url),
@@ -43,7 +45,7 @@ class _EstablishmentOnMapState extends State<_EstablishmentOnMap>
   Widget build(BuildContext context) {
     return new WebviewScaffold(
         appBar: CupertinoNavigationBar(
-          middle: Text("Your bar on the map"),
+          middle: Text("View the map"),
         ),
         url: urlTowardsGoogleMaps
     );
