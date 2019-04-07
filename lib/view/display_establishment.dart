@@ -232,7 +232,7 @@ class DisplayEstablishment extends StatelessWidget {
             SizedBox(height: 25.0,),
             RaisedButton(
               color: Colors.green[700],
-              child: Text("Display on a map"),
+              child: Text("Display on a map", style: TextStyle(color: Colors.white),),
               onPressed: () => {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => EstablishmentOnMap(this.establishment)))
               },
