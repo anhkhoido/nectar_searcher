@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import '../model/establishment.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class EstablishmentOnMap extends StatelessWidget {
 
@@ -19,6 +19,9 @@ class EstablishmentOnMap extends StatelessWidget {
                   this.establishment.province;
 
     return Scaffold(
+      appBar: CupertinoNavigationBar(
+        middle: Text("View the map"),
+      ),
       body: _EstablishmentOnMap(url),
     );
   }
@@ -43,11 +46,9 @@ class _EstablishmentOnMapState extends State<_EstablishmentOnMap>
 
   @override
   Widget build(BuildContext context) {
-    return new WebviewScaffold(
-        appBar: CupertinoNavigationBar(
-          middle: Text("View the map"),
-        ),
-        url: urlTowardsGoogleMaps
+    return WebView(
+      initialUrl: urlTowardsGoogleMaps,
+      javascriptMode: JavascriptMode.unrestricted,
     );
   }
 }
