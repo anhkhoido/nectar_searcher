@@ -11,11 +11,13 @@ class EstablishmentOnMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    String url = "https://maps.google.com?q=" +
+                  this.establishment.name + ", " +
+                  this.establishment.address;
+
     return Scaffold(
-      body: _EstablishmentOnMap("https://www.google.com/maps/place/" +
-                                this.establishment.name.replaceAll(RegExp(r' '), "+") +
-                                "/@" + this.establishment.latitude.toString() + "," +
-                                this.establishment.longitude.toString() + "z/"),
+      body: _EstablishmentOnMap(url),
     );
   }
 }
